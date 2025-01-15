@@ -145,6 +145,15 @@ void Clear_LEDs(void)
   HAL_GPIO_WritePin(LED_D4_GPIO_Port, LED_D4_Pin,GPIO_PIN_SET);
 }
 
+void All_LEDs(void)
+{
+	  // Clear the LED lights
+  HAL_GPIO_WritePin(LED_D1_GPIO_Port, LED_D1_Pin,GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_D2_GPIO_Port, LED_D2_Pin,GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_D3_GPIO_Port, LED_D3_Pin,GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_D4_GPIO_Port, LED_D4_Pin,GPIO_PIN_RESET);
+}
+
 void MultiFunctionShield_Clear(void)
 {
 	/* This blanks the SevenSegments and turns off the LEDs */
